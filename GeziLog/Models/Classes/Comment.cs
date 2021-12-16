@@ -13,6 +13,6 @@ namespace GeziLog.Models.Classes
         public string UserName { get; set; }   
         public string Mail { get; set; }   
         public string CommentArea { get; set; }  
-        public virtual Blog Blog { get; set; }
+        public virtual Blog Blog { get; set; } 
     }
 }
