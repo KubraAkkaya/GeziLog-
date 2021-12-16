@@ -1,0 +1,73 @@
+﻿@using GeziLog.Models.Classes
+@model List<Blog>
+@{
+    ViewBag.Title = "Single";
+    Layout = "~/Views/Shared/_ViewLayout.cshtml";
+}
+
+@foreach (var x in Model)
+{
+    <section class="w3l-breadcrumb py-5">
+        <div class="container">
+            <h6 class="sub-title"></h6>
+            <div class="header-section">
+                <h3>@x.Title</h3>
+            </div>
+        </div>
+    </section>
+
+    <div class="about py-5">
+        <div class="container py-lg-3">
+            <div class="row">
+                <div class="col-lg-6 publication-about-grid">
+                    <p class="mb-4">
+                        @x.Content
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
+                    <img src="@x.PhotoBlogURL" alt=" " class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<ul class="comment-list">
+    <li>
+        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+        <div class="desc">
+            <p>Şevval Özdamar: Çok güzeldi, bayıldım! </p>
+        </div>
+        <div class="clearfix"></div>
+    </li>
+    <hr />
+    <li>
+        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+        <div class="desc">
+            <p>Şevval Özdamar: Çok güzeldi, bayıldım! </p>
+        </div>
+        <div class="clearfix"></div>
+    </li>
+</ul>
+
+
+<section class="w3l-contact" id="contact">
+    <div class="container py-5">
+        <div class="contacts12-main py-md-3">
+            <div class="header-section text-center">
+                <h3 class="mb-md-5 mb-4">Yorum bırakın</h3>
+            </div>
+            <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="">
+                <div class="main-input">
+                    <input type="text" name="w3lName" placeholder="Enter your name" class="contact-input" required="" />
+                    <input type="email" name="w3lSender" placeholder="Enter your mail" class="contact-input" required="" />
+                    <textarea class="contact-textarea contact-input" name="w3lMessage" placeholder="Enter your message" required=""></textarea>
+                </div>
+                <div class="text-right">
+                    <button class="btn-primary btn theme-button">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

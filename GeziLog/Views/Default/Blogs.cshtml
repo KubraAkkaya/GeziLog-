@@ -1,0 +1,37 @@
+﻿@using GeziLog.Models.Classes
+@model List<Blog>
+@{
+    ViewBag.Title = "Blogs";
+    Layout = "~/Views/Shared/_ViewLayout.cshtml";
+}
+
+
+<section class="w3l-authors" id="testimonials">
+    <div class="testimonials pb-5">
+        <div class="container py-lg-3">
+            <div class="row">
+                @foreach (var x in Model)
+                {
+                    <div class="col-lg-6">
+                        <div class="slider-info">
+                            <div class="img-circle">
+                                <a href="/Default/Single/"><img src=@x.PhotoBlogURL class="img-fluid" alt=""></a>
+                            </div>
+                            <div class="message">
+                                <ul class="blog-single-author-date d-flex align-items-center">
+                                    <li><a href="">admin</a></li>
+                                    <li><span class="fa fa-clock-o" aria-hidden="true"></span> @x.Date </li>
+                                </ul>
+                                <a class="author-book-title" href="/Default/Single/@x.ID">@x.Title</a>
+                                <p>
+                                    @x.Content
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
