@@ -135,6 +135,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classes\About.cs" />
     <Compile Include="Models\Classes\Admin.cs" />
+    <Compile Include="Models\Classes\BlogComment.cs" />
     <Compile Include="Models\Classes\Comment.cs" />
     <Compile Include="Models\Classes\Contact.cs" />
     <Compile Include="Models\Classes\Context.cs" />
@@ -247,7 +248,7 @@
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Default\Blogs.cshtml" />
-    <Content Include="Views\Default\Single.cshtml" />
+    <Content Include="Views\Default\BlogDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

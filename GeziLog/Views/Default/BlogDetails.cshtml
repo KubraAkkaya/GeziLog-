@@ -1,11 +1,11 @@
-﻿@using GeziLog.Models.Classes
-@model List<Blog>
+﻿
+@model GeziLog.Models.Classes.BlogComment
 @{
-    ViewBag.Title = "Single";
+    ViewBag.Title = "BlogDetails";
     Layout = "~/Views/Shared/_ViewLayout.cshtml";
 }
 
-@foreach (var x in Model)
+@foreach (var x in Model.Value1)
 {
     <section class="w3l-breadcrumb py-5">
         <div class="container">
@@ -32,24 +32,19 @@
     </div>
 }
 
+@foreach (var y in Model.Value2)
+{
+    <ul class="comment-list">
+        <li>
+            <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+            <div class="desc">
+            <p>@y.UserName : @y.CommentArea </p>
+            </div>
+            <div class="clearfix"></div>
+        </li>
+    </ul>
+}
 
-<ul class="comment-list">
-    <li>
-        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-        <div class="desc">
-            <p>Şevval Özdamar: Çok güzeldi, bayıldım! </p>
-        </div>
-        <div class="clearfix"></div>
-    </li>
-    <hr />
-    <li>
-        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-        <div class="desc">
-            <p>Şevval Özdamar: Çok güzeldi, bayıldım! </p>
-        </div>
-        <div class="clearfix"></div>
-    </li>
-</ul>
 
 
 <section class="w3l-contact" id="contact">

@@ -41,12 +41,17 @@ namespace GeziLog.Controllers
             return View(values);
         }
 
-        // GET: Single
+        // GET: BlogDetails
 
-        public ActionResult Single(int id)
+        BlogComment bc = new BlogComment();
+        public ActionResult BlogDetails(int id)
         {
-            var findBlog = contextBlogs.Blogs.Where(x=>x.ID == id).ToList();
-            return View(findBlog);
+            //var findBlog = contextBlogs.Blogs.Where(x=>x.ID == id).ToList();
+            bc.Value1 = contextBlogs.Blogs.Where(x => x.ID == id).ToList();
+            bc.Value2 = contextBlogs.Comments.Where(x => x.Blogid == id).ToList();
+            return View(bc);
         }
+
+        
     }
 }
