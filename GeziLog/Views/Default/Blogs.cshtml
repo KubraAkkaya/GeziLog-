@@ -1,5 +1,4 @@
-﻿@using GeziLog.Models.Classes
-@model List<Blog>
+﻿@model GeziLog.Models.Classes.BlogComment
 @{
     ViewBag.Title = "Blogs";
     Layout = "~/Views/Shared/_ViewLayout.cshtml";
@@ -10,7 +9,7 @@
     <div class="testimonials pb-5">
         <div class="container py-lg-3">
             <div class="row">
-                @foreach (var x in Model)
+                @foreach (var x in Model.Value1)
                 {
                     <div class="col-lg-6">
                         <div class="slider-info">

@@ -191,6 +191,7 @@
     <Content Include="web\assets\images\banner1.jpg" />
     <Content Include="web\assets\images\banner2.jpg" />
     <Content Include="web\assets\images\banner3.jpg" />
+    <Content Include="web\assets\images\eyfel-kulesi.jpg" />
     <Content Include="web\assets\images\img1.jpg" />
     <Content Include="web\assets\images\img10.jpg" />
     <Content Include="web\assets\images\img11.jpg" />
@@ -249,6 +250,7 @@
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Default\Blogs.cshtml" />
     <Content Include="Views\Default\BlogDetails.cshtml" />
+    <Content Include="Views\Default\Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
