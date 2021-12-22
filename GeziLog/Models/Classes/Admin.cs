@@ -10,7 +10,7 @@ namespace GeziLog.Models.Classes
     {
         [Key]
         public int ID { get; set; }
-        public string AdminName { get; set; }
+        public string User { get; set; }
         public string Password { get; set; }
     }
 }

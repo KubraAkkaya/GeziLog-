@@ -21,11 +21,6 @@ namespace GeziLog.Controllers
             return View(bc);
         }
 
-        public PartialViewResult Partial()
-        {
-            var values = contextBlogs.Blogs.OrderByDescending(x=>x.ID).Take(2).ToList();
-            return PartialView(values);
-        }
 
         // GET: About
 
@@ -64,6 +59,12 @@ namespace GeziLog.Controllers
             return View(bc);
         }
 
-        
+        public PartialViewResult Partial()
+        {
+            var values = contextBlogs.Blogs.OrderByDescending(x => x.ID).Take(2).ToList();
+            return PartialView(values);
+        }
+
+
     }
 }
