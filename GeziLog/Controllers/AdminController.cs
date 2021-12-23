@@ -12,6 +12,7 @@ namespace GeziLog.Controllers
         // GET: Admin (blogları listeleme)
 
         Context contextAdmin = new Context();
+        [Authorize]
         public ActionResult Index()
         {
             var values = contextAdmin.Blogs.ToList();
