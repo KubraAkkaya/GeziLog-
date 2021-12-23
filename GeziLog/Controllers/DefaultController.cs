@@ -65,6 +65,20 @@ namespace GeziLog.Controllers
             return PartialView(values);
         }
 
-
+        //Context contextComment = new Context();
+        // GET: PartialView: ToComment
+        [HttpGet]
+        public PartialViewResult ToComment(int id)
+        {
+            ViewBag.value = id;
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult ToComment(Comment c)
+        {
+            contextBlogs.Comments.Add(c);
+            contextBlogs.SaveChanges();
+            return PartialView();
+        }
     }
 }

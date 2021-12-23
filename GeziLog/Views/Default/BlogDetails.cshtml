@@ -38,16 +38,17 @@
         <li>
             <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
             <div class="desc">
-            <p>@y.UserName : @y.CommentArea </p>
+                <p>@y.UserName : @y.CommentArea </p>
             </div>
             <div class="clearfix"></div>
         </li>
     </ul>
 }
 
+@Html.Action("ToComment", "Default")
 
 
-<section class="w3l-contact" id="contact">
+@*<section class="w3l-contact" id="contact">
     <div class="container py-5">
         <div class="contacts12-main py-md-3">
             <div class="header-section text-center">
@@ -65,4 +66,4 @@
             </form>
         </div>
     </div>
-</section>
+</section>*@
