@@ -83,16 +83,16 @@ namespace GeziLog.Controllers
             return View("GetComment", comment);
         }
 
-        //Yorum güncelle
-        public ActionResult UpdateComment(Comment c)
-        {
-            var comment = contextAdmin.Comments.Find(c.ID);
-            comment.UserName =c.UserName;
-            comment.Mail =c.Mail;
-            comment.CommentArea =c.CommentArea;
-            contextAdmin.SaveChanges();
-            return RedirectToAction("CommentList");
-        }
+        ////Yorum güncelle
+        //public ActionResult UpdateComment(Comment c)
+        //{
+        //    var comment = contextAdmin.Comments.Find(c.ID);
+        //    comment.UserName =c.UserName;
+        //    comment.Mail =c.Mail;
+        //    comment.CommentArea =c.CommentArea;
+        //    contextAdmin.SaveChanges();
+        //    return RedirectToAction("CommentList");
+        //}
 
     }
 }

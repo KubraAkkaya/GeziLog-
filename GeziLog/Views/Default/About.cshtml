@@ -1,60 +1,29 @@
 ﻿@using GeziLog.Models.Classes
 @model List<About>
 
-@{
-    ViewBag.Title = "About";
-    Layout = "~/Views/Shared/_ViewLayout.cshtml";
-}
+@{ ViewBag.Title = "About";
+                Layout = "~/Views/Shared/_ViewLayout.cshtml"; }
 
 <section class="w3l-breadcrumb py-5">
     <div class="container">
         <h6 class="sub-title"></h6>
         <div class="header-section">
-            <h3>About Us</h3>
+            <h3>Hakkımızda</h3>
         </div>
     </div>
 </section>
 
 @foreach (var x in Model)
 {
-    <div class="about py-5">
-        <div class="container py-lg-3">
-            <div class="row">
-                <div class="col-lg-6 publication-about-grid">
-                    <p class="mb-4 mt-0 about-title"><b>@x.Content </b></p>
-                    <p class="mb-4">
-                        Lorem Ipsum is simply dummy text of the Ipsum has been the industry's since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.
-                    </p>
-                    <p class="mb-4">
-                        It has survived not only five centuries, remaining essentially unchanged. It was the release of Letraset sheets containing
-                        Lorem Ipsum
-                        passages, and more recently with desktop publishing software like Aldus PageMaker.
-                    </p>
-                    <p class="mb-4">
-                        Lorem Ipsum is simply dummy text of the Ipsum has been the industry's since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
-                    <img src=@x.PhotoAboutURL alt=" " class="img-fluid" />
-                </div>
+<div class="about py-5">
+    <div class="container py-lg-3">
+        <div class="row">
+            <div class="col-lg-6 publication-about-grid">
+                <p class="mb-4"> @x.Content </p>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-12 publication-about-grid">
-                    <div class="about-page-content mt-4 pt-lg-3">
-                        <h3 class="about-head-title m-0 mb-4">Developing first class solutions for our clients.</h3>
-                        <p class="mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel nam tenetur sequi
-                            assumenda fuga
-                            sit non praesentium aut voluptatibus rem repellendus amet fugit, ab eligendi ratione, placeat quo
-                            ducimus at? Et suscipit earum reiciendis perferendis, dignissimos, labore quos voluptatibus voluptas
-                            ipsam placeat voluptates laborum maxime asperiores natus tempore incidunt.
-                        </p>
-                    </div>
-                </div>
+            <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
+                <img src=@x.PhotoAboutURL alt=" " class="img-fluid"/>
             </div>
         </div>
     </div>
-
-}
+</div>}

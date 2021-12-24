@@ -26,22 +26,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
     <div class="padding-all">
         <div class="header">
-            <h1>GeziLog Giriş Formu</h1>
+            <h1>GeziLog Admin Girişi</h1>
         </div>
 
         <div class="design-w3l">
             <div class="mail-form-agile">
-                <form action="#" method="post">
-                    <input type="text" name="name" placeholder="Kullanıcı Adınız..." required="" />
-                    <input type="password" name="password" class="padding" placeholder="Şifre" required="" />
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post)) 
+                {
+                    <input type="text" name="User" placeholder="Kullanıcı Adı" required="" />
+                    <input type="password" name="Password" class="padding" placeholder="Şifre" required="" />
                     <input type="submit" value="Giriş">
-                </form>
+                }
             </div>
             <div class="clear"> </div>
         </div>
 
         <div class="footer">
-            <p>© 2021  Master Login form. Tüm hakları saklıdır. @*| Design by  <a href="https://w3layouts.com/">  w3layouts </a>*@</p>
+            <p>© 2021 GeziLog | Tüm hakları saklıdır. </p>
         </div>
     </div>
 </body>
