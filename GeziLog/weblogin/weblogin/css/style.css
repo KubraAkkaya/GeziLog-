@@ -28,12 +28,14 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
-body{
-text-align: center;
-background: url("/weblogin/weblogin/images/manzara.jpg") 0px 0px no-repeat;
-background-size:cover;
-background-attachment: fixed;
+body {
+    text-align: center;
+    background: url("/weblogin/weblogin/images/manzara.jpg") no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
 }
+
+
 .padding-all{
 padding:100px;
 }
