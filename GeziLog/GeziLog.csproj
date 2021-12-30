@@ -129,7 +129,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -159,14 +158,6 @@
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\style.css" />
     <Content Include="web2\images\avatar.png" />
-    <Content Include="web2\images\icon3.png" />
-    <Content Include="web2\images\logo.jpg" />
-    <Content Include="web2\images\man.jpg" />
-    <Content Include="web2\images\more.png" />
-    <Content Include="web2\images\post1.jpg" />
-    <Content Include="web2\images\post2.jpg" />
-    <Content Include="web2\images\post3.jpg" />
-    <Content Include="web2\images\search.png" />
     <Content Include="web2\js\easing.js" />
     <Content Include="web2\js\jquery.min.js" />
     <Content Include="web2\js\move-top.js" />
@@ -204,8 +195,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_ViewLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="web\assets\fonts\fontawesome-webfont.eot" />
