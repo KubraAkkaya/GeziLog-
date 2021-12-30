@@ -1,0 +1,21 @@
+﻿@model GeziLog.Models.Classes.About
+@{
+    ViewBag.Title = "GetAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>About Güncelle</h2>
+<br />
+@using (Html.BeginForm("UpdateAbout", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.PhotoAboutURL)
+    @Html.TextBoxFor(x => x.PhotoAboutURL, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Content)
+    @Html.TextAreaFor(x => x.Content, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">About Güncelle</button>
+}

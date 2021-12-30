@@ -1,0 +1,30 @@
+﻿@using GeziLog.Models.Classes
+@model List<About>
+@{
+    ViewBag.Title = "AboutList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımızda</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th> ABOUT ID </th>
+        <th> ABOUT İÇERİK </th>
+        <th> ABOUT SİL </th>
+        <th> ABOUT GÜNCELLE </th>
+        <th> ABOUT DETAYLARI </th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th> @x.ID </th>
+            <th> @x.Content </th>
+            <th> <a href="/Admin/DeleteAbout/@x.ID" class="btn btn-danger">Sil</a></th>
+            <th> <a href="/Admin/GetAbout/@x.ID" class="btn btn-warning">Güncelle</a></th>
+            <th> <a href="/Default/About/" class="btn btn-primary">Detaylar</a></th>
+        </tr>
+    }
+</table>
+
+<a href="/Admin/NewAbout" class="btn btn-info">ABOUT EKLE</a>

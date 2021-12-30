@@ -11,13 +11,8 @@ namespace GeziLog.Controllers
     public class LoginController : Controller
     {
         Context context = new Context();
-
-        // GET: Login
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
+        
+        //GET: Login
         public ActionResult Login()
         {
             return View();

@@ -1,0 +1,17 @@
+﻿@model GeziLog.Models.Classes.About
+@{
+    ViewBag.Title = "NewAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni About Ekle</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Content)
+    @Html.TextBoxFor(x => x.Content, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PhotoAboutURL)
+    @Html.TextBoxFor(x => x.PhotoAboutURL, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">About Ekle</button>
+</form>

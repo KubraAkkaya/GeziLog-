@@ -94,5 +94,63 @@ namespace GeziLog.Controllers
         //    return RedirectToAction("CommentList");
         //}
 
+
+        //iletişim
+        //public ActionResult GetContact()
+        //{
+        //    return View();
+        //}
+        //public ActionResult GetContact(Contact cantact)
+        //{
+        //    contextAdmin.Contacts.Add(cantact);
+        //    contextAdmin.SaveChanges();
+        //    return View("GetContact", cantact);
+        //}
+
+        // GET: Admin (about listeleme)
+        public ActionResult AboutList()
+        {
+            var abouts = contextAdmin.Abouts.ToList();
+            return View(abouts);
+        }
+
+        // GET: Admin (about ekleme)
+        [HttpGet]
+        public ActionResult NewAbout()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewAbout(About a)
+        {
+            contextAdmin.Abouts.Add(a);
+            contextAdmin.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // GET: Admin (about silme)
+        public ActionResult DeleteAbout(int id)
+        {
+            var findedAbout = contextAdmin.Abouts.Find(id);
+            contextAdmin.Abouts.Remove(findedAbout);
+            contextAdmin.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // GET: Admin (about güncelleme)
+        public ActionResult GetAbout(int id)
+        {
+            var findedAbout = contextAdmin.Abouts.Find(id);
+            return View("GetAbout", findedAbout);
+        }
+        public ActionResult UpdateAbout(About a)
+        {
+            var findedAbout2 = contextAdmin.Abouts.Find(a.ID);
+            findedAbout2.Content = a.Content;
+            findedAbout2.PhotoAboutURL = a.PhotoAboutURL;
+            contextAdmin.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

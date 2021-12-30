@@ -12,12 +12,12 @@ namespace GeziLog.Controllers
 
         Context contextBlogs = new Context();
         BlogComment bc = new BlogComment();
+
         // GET: Index
 
         public ActionResult Index()
         {
             bc.Value3 = contextBlogs.Blogs.OrderByDescending(x=>x.ID).Take(2).ToList();
-           // var values = contextBlogs.Blogs.ToList(); burası için de nasıl view de döndürebiliriz!
             return View(bc);
         }
 
@@ -66,6 +66,7 @@ namespace GeziLog.Controllers
         }
 
         //Context contextComment = new Context();
+
         // GET: PartialView: ToComment
         [HttpGet]
         public PartialViewResult ToComment(int id)
