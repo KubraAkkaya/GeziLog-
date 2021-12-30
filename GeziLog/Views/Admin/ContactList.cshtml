@@ -1,0 +1,30 @@
+﻿@using GeziLog.Models.Classes
+@model List<Contact>
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th> ID </th>
+        <th> AD </th>
+        <th> MAIL </th>
+        <th> KONU </th>
+        <th> MESAJ </th>
+        <th> SİL </th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td> @x.ID </td>
+            <td> @x.Name </td>
+            <td> @x.Mail </td>
+            <td> @x.Subject </td>
+            <td> @x.Message </td>
+            <td> <a href="/Admin/DeleteContact/@x.ID" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>

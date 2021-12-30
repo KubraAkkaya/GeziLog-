@@ -156,8 +156,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="web2\about.html" />
-    <Content Include="web2\contact.html" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\style.css" />
     <Content Include="web2\images\avatar.png" />
@@ -169,34 +167,24 @@
     <Content Include="web2\images\post2.jpg" />
     <Content Include="web2\images\post3.jpg" />
     <Content Include="web2\images\search.png" />
-    <Content Include="web2\index.html" />
     <Content Include="web2\js\easing.js" />
     <Content Include="web2\js\jquery.min.js" />
     <Content Include="web2\js\move-top.js" />
-    <Content Include="web2\single.html" />
-    <Content Include="web2\w3layouts-License.txt" />
     <Content Include="weblogin\weblogin\css\style.css" />
     <Content Include="weblogin\weblogin\images\b4.jpg" />
-    <Content Include="weblogin\weblogin\index.html" />
-    <Content Include="weblogin\weblogin\w3layouts-License.txt" />
-    <Content Include="web\about.html" />
     <Content Include="web\assets\css\style-starter.css" />
     <Content Include="web\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="web\assets\images\i1.jpeg" />
     <Content Include="web\assets\images\i2.jpeg" />
-    <Content Include="web\assets\images\i3.jpeg" />
     <Content Include="weblogin\weblogin\images\manzara.jpg" />
     <Content Include="weblogin\weblogin\images\manzara2.jpg" />
+    <Content Include="web\assets\images\i3.jpeg" />
     <Content Include="web\assets\js\bootstrap.min.js" />
     <Content Include="web\assets\js\easyResponsiveTabs.js" />
     <Content Include="web\assets\js\jquery-1.9.1.min.js" />
     <Content Include="web\assets\js\jquery-3.4.1.slim.min.js" />
     <Content Include="web\assets\js\owl.carousel.js" />
     <Content Include="web\assets\js\theme-change.js" />
-    <Content Include="web\blog.html" />
-    <Content Include="web\contact.html" />
-    <Content Include="web\index.html" />
-    <Content Include="web\single.html" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -218,9 +206,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_ViewLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="web\assets\fonts\fontawesome-webfont.eot" />
@@ -245,6 +230,8 @@
     <Content Include="Views\Admin\AboutList.cshtml" />
     <Content Include="Views\Admin\GetAbout.cshtml" />
     <Content Include="Views\Admin\NewAbout.cshtml" />
+    <Content Include="Views\Admin\ContactList.cshtml" />
+    <Content Include="Views\Default\ToContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

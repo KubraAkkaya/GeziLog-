@@ -81,5 +81,21 @@ namespace GeziLog.Controllers
             contextBlogs.SaveChanges();
             return PartialView();
         }
+
+        Context contextContacts = new Context();
+        // GET: PartialView: ToContact
+        [HttpGet]
+        public PartialViewResult ToContact()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult ToContact(Contact con)
+        {
+            contextContacts.Contacts.Add(con);
+            contextContacts.SaveChanges();
+            return PartialView();
+        }
+
     }
 }
