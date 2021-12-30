@@ -60,14 +60,14 @@ namespace GeziLog.Controllers
         }
 
 
-        //Yorum listesi
+        // GET: Admin (yorum listesi)
         public ActionResult CommentList()
         {
             var comments = contextAdmin.Comments.ToList();
             return View(comments);
         }
 
-        //Yorum silme
+        // GET: Admin (yorum silme)
         public ActionResult DeleteComment(int id)
         {
             var deleteComment = contextAdmin.Comments.Find(id);
@@ -76,23 +76,12 @@ namespace GeziLog.Controllers
             return RedirectToAction("CommentList");
         }
 
-        //yorum getir
+        // GET: Admin (yorum getir)
         public ActionResult GetComment(int id)
         {
             var comment = contextAdmin.Comments.Find(id);
             return View("GetComment", comment);
         }
-
-        ////Yorum güncelle
-        //public ActionResult UpdateComment(Comment c)
-        //{
-        //    var comment = contextAdmin.Comments.Find(c.ID);
-        //    comment.UserName =c.UserName;
-        //    comment.Mail =c.Mail;
-        //    comment.CommentArea =c.CommentArea;
-        //    contextAdmin.SaveChanges();
-        //    return RedirectToAction("CommentList");
-        //}
 
 
         // GET: Admin (about listeleme)
