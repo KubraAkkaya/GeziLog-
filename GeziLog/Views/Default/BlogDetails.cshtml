@@ -1,7 +1,6 @@
-﻿
-@model GeziLog.Models.Classes.BlogComment
+﻿@model GeziLog.Models.Classes.BlogComment
 @{
-    ViewBag.Title = "BlogDetails";
+    ViewBag.Title = "Single";
     Layout = "~/Views/Shared/_ViewLayout.cshtml";
 }
 
@@ -16,16 +15,17 @@
         </div>
     </section>
 
-    <div class="about py-5">
-        <div class="container py-lg-3">
+
+    <div class="py-5">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-6 publication-about-grid">
+                <div class="col">
+                    <span class="mr-3 mb-3 d-inline-block float-left">
+                        <img src="@x.PhotoBlogURL" alt=" " class="img-fluid blogPic" />
+                    </span>
                     <p class="mb-4">
                         @x.Content
                     </p>
-                </div>
-                <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
-                    <img src="@x.PhotoBlogURL" alt=" " class="img-fluid" />
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
         <li>
             <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
             <div class="desc">
-                <p>@y.UserName : @y.CommentArea </p>
+                <p>@y.UserName: @y.CommentArea </p>
             </div>
             <div class="clearfix"></div>
         </li>
@@ -46,24 +46,3 @@
 }
 
 @Html.Action("ToComment", "Default")
-
-
-@*<section class="w3l-contact" id="contact">
-    <div class="container py-5">
-        <div class="contacts12-main py-md-3">
-            <div class="header-section text-center">
-                <h3 class="mb-md-5 mb-4">Yorum bırakın</h3>
-            </div>
-            <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="">
-                <div class="main-input">
-                    <input type="text" name="w3lName" placeholder="Enter your name" class="contact-input" required="" />
-                    <input type="email" name="w3lSender" placeholder="Enter your mail" class="contact-input" required="" />
-                    <textarea class="contact-textarea contact-input" name="w3lMessage" placeholder="Enter your message" required=""></textarea>
-                </div>
-                <div class="text-right">
-                    <button class="btn-primary btn theme-button">Send</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>*@

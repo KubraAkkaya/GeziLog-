@@ -1,8 +1,10 @@
 ﻿@using GeziLog.Models.Classes
 @model List<About>
 
-@{ ViewBag.Title = "About";
-                Layout = "~/Views/Shared/_ViewLayout.cshtml"; }
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_ViewLayout.cshtml";
+}
 
 <section class="w3l-breadcrumb py-5">
     <div class="container">
@@ -13,17 +15,25 @@
     </div>
 </section>
 
+
 @foreach (var x in Model)
 {
-<div class="about py-5">
-    <div class="container py-lg-3">
-        <div class="row">
-            <div class="col-lg-6 publication-about-grid">
-                <p class="mb-4"> @x.Content </p>
-            </div>
-            <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
-                <img src=@x.PhotoAboutURL alt=" " class="img-fluid"/>
+    <div class="about py-md-5 py-4">
+        <div class="container">
+            <div>
+                <div class="row p-3 align-items-center">
+                    <div class="col-6 col-md-3 px-5">
+                        <img src="@x.PhotoAboutURL" alt="" class="rounded-circle img-fluid">
+                    </div>
+                    <div class="col-12 col-md-9 text-start px-5 mt-md-0 mt-4">
+                        <p>
+                            @x.Content
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>}
+}
+
+
