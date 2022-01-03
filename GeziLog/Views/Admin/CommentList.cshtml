@@ -6,6 +6,7 @@
 }
 
 <h2>Yorumlar</h2>
+<br />
 
 <table class="table table-bordered">
     <tr>
@@ -20,15 +21,14 @@
     </tr>
     @foreach (var x in Model)
     {
-<tr>
-    <td>@x.ID</td>
-    <td>@x.UserName</td>
-    <td>@x.Mail</td>
-    <td>@x.CommentArea</td>
-    <td>@x.Blog.Title</td>
-    <td><a href="/Admin/DeleteComment/@x.ID" class="btn btn-danger">Sil</a></td>
-    <th> <a href="/Default/BlogDetails/@x.Blogid" class="btn btn-primary">Detaylar</a></th>
-    @*<td><a href="/Admin/GetComment/@x.ID" class="btn btn-warning">Güncelle</a></td>*@
-</tr>
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.UserName</td>
+            <td>@x.Mail</td>
+            <td>@x.CommentArea</td>
+            <td>@x.Blog.Title</td>
+            <td><a href="/Admin/DeleteComment/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td> <a href="/Default/BlogDetails/@x.Blogid" class="btn btn-primary">Detaylar</a></td>
+        </tr>
     }
 </table>

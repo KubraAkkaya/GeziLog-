@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Blog Güncelle</h2>
+<h2>Blog Düzenle</h2>
 <br />
 @using (Html.BeginForm("UpdateBlog", "Admin", FormMethod.Post))
 {
@@ -23,5 +23,5 @@
     @Html.LabelFor(x => x.Content)
     @Html.TextAreaFor(x => x.Content, 15, 1, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Blog Güncelle</button>
+    <button class="btn btn-primary">Güncelle</button>
 }

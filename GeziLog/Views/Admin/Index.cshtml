@@ -12,7 +12,7 @@
         <th> BLOG ID </th>
         <th> BLOG BAŞLIK </th>
         <th> BLOG SİL </th>
-        <th> BLOG GÜNCELLE </th>
+        <th> BLOG DÜZENLE </th>
         <th> BLOG DETAYLARI </th>
     </tr>
     @foreach (var x in Model)
@@ -21,10 +21,10 @@
             <th> @x.ID </th>
             <th> @x.Title </th>
             <th> <a href="/Admin/DeleteBlog/@x.ID" class="btn btn-danger">Sil</a></th>
-            <th> <a href="/Admin/GetBlog/@x.ID" class="btn btn-warning">Güncelle</a></th>
+            <th> <a href="/Admin/GetBlog/@x.ID" class="btn btn-warning">Düzenle</a></th>
             <th> <a href="/Default/BlogDetails/@x.ID" class="btn btn-primary">Detaylar</a></th>
         </tr>
     }
 </table>
 
-<a href="/Admin/NewBlog" class="btn btn-primary">BLOG EKLE</a>
+<a href="/Admin/NewBlog" class="btn btn-info">BLOG EKLE</a>
