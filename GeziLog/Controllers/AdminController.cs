@@ -60,6 +60,8 @@ namespace GeziLog.Controllers
         }
 
 
+
+
         // GET: Admin (yorum listesi)
         public ActionResult CommentList()
         {
@@ -82,6 +84,9 @@ namespace GeziLog.Controllers
             var comment = contextAdmin.Comments.Find(id);
             return View("GetComment", comment);
         }
+
+
+
 
 
         // GET: Admin (about listeleme)
@@ -130,6 +135,16 @@ namespace GeziLog.Controllers
         }
 
 
+
+        //Toplam Yorum Listeleme
+        public PartialViewResult TotalComment()
+        {
+            var tc = contextAdmin.Counters.ToList();
+            return PartialView(tc);
+        }
+
+
+
         // GET: Admin (contact listeleme)
         public ActionResult ContactList()
         {
@@ -145,6 +160,7 @@ namespace GeziLog.Controllers
             contextAdmin.SaveChanges();
             return RedirectToAction("Index");
         }
+
 
     }
 }

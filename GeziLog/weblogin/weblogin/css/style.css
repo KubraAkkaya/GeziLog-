@@ -30,7 +30,7 @@ img{max-width:100%;}
 /****-----start-body----****/
 body {
     text-align: center;
-    background: url("/weblogin/weblogin/images/manzara.jpg") no-repeat center;
+    background-color: rgb(137, 92, 111);
     background-size:cover;
     background-attachment: fixed;
 }

@@ -1,0 +1,7 @@
+﻿@using GeziLog.Models.Classes
+@model List<Counter>
+
+@foreach (var x in Model)
+{
+    <h3>Toplam Yorum Sayısı: @x.CommentCounter </h3>
+}
